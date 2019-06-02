@@ -1,0 +1,44 @@
+{% extends 'Home.html' %}
+  {% block content %}
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">{{ course }}</h4>
+              <p class="card-category">{{ message }}</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>Reg number</th>
+                    <th>Full Name</th>
+                    <th>Course Work</th>
+                    <th>Exam Mark</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                    <th>Comment</th>
+                  </thead>
+                  <tbody>
+                {% for student in Students %}
+                    <tr>
+                      <td>{{student.Reg_number}}</td>
+                      <td>{{student.Full_name}}</td>
+                      <td>{{student.Total_Course_Work}}</td>
+                      <td>{{student.Total_Exam_mark}}</td>
+                      <td>{{student.Final_Mark}}</td>
+                      <td>{{student.Grade}}</td>
+                      <td>{{student.Comment}}</td>
+                    </tr> 
+                {% endfor %}              
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+     {% endblock %}

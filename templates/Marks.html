@@ -1,0 +1,50 @@
+{% extends 'Home.html' %}
+  {% block content %}
+  <div class="content">
+    <div class="container-fluid">
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+            </div>
+
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title ">{{ name }}</h4>
+              <p class="card-category">{{ message }}</p>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>Company Name</th>
+                    <th>Location</th>
+                    <th>PNS</th>
+                    <th>EPS</th>
+                    <th>PBIDT</th>
+                    <th>SNA</th>
+                    <th>Z logic Value</th>
+                    <th>Comment</th>
+                  </thead>
+                  <tbody>
+                {% for company in Company_list %}
+                    <tr>
+                      <td>{{company.Name}}</td>
+                      <td>{{company.Location}}</td>
+                      <td>{{company.PNS}}</td>
+                      <td>{{company.EPS}}</td>
+                      <td>{{company.PBIDT}}</td>
+                      <td>{{company.SNA}}</td>
+                      <td>{{company.PValue}}</td>
+                      <td>{{company.Comment}}</td>
+                    </tr> 
+                {% endfor %}              
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+     {% endblock %}

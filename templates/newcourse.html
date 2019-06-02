@@ -1,0 +1,72 @@
+{% extends 'Home.html' %}
+  {% block content %}
+      <div class="content">
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h4 class="card-title">New Company</h4>
+              <p class="card-category">Registering new Company</p>
+            </div>
+            <div class="card-body">
+              <div id="typography">
+                <div class="card-title">
+                  <h2></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form method="POST" action="/newcourse">
+                            <div class="form-group">
+                                    <label class="control-label">Company Name</label><br>
+                                    <input type="text" class="form-control" placeholder="Company name here...." name="Company" required=''>
+
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label class="control-label">Location</label>
+                                <input type="text" class="form-control" name="Location" required=''>
+                            </div>
+                            <br>
+                            <div class="row">
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label class="control-label">PNS</label>
+                                      <input class="form-control" type="value" max="100" min="0" name="pns" required = "">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label class="control-label">SNA</label>
+                                        <input class= "form-control" type="value" max="100" min="0" name="sna" required = ''>
+                                      </div>
+                                      <br>
+                                
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="form-group">
+                                      <label class="control-label">EPS</label>
+                                      <input class= "form-control" type="value" max="100" min="0" name="eps" required = ''>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label class="control-label">PBIDT</label>
+                                        <input class= "form-control" type="value" max="100" min="0" name="pbidt" required = ''>
+                                      </div>
+                                      <br>
+                              </div>
+                            </div>
+
+
+                            <center> 
+                                    <button type="submit" class="btn btn-default">Save Changes</button>
+                            </center>
+                            
+                        </form>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% endblock %}
